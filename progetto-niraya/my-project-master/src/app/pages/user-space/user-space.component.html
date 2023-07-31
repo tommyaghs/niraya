@@ -1,0 +1,454 @@
+<div class="container-xl px-4 mt-4">
+  <div class="container "></div>
+  <h3 class="display-7 m-0 text-capitalize d-flex justify-content-center">Spazio Utente</h3>
+  <!-- Navigazione della pagina utente -->
+  <!-- Account page navigation-->
+  <nav class="nav nav-borders">
+    <a (click)="goToSelection('Profilo')" class="text-dark nav-link ms-0">Profilo</a>
+    <a (click)="goToSelection('Fatturazione')" class="text-dark nav-link">Fatturazione</a>
+    <a (click)="goToSelection('Sicurezza')" class="text-dark nav-link">Sicurezza</a>
+    <a (click)="goToSelection('Notifiche')" class="text-dark nav-link">Notifiche</a>
+  </nav>
+  <hr class="mt-0 mb-4">
+</div>
+
+<div [ngSwitch]="userspace">
+  <div *ngSwitchDefault="'Profilo'">
+    <div class="container-xl px-4">
+      <div class="row">
+        <div class="col-xl-4">
+          <!-- Profile picture card-->
+          <div class="card card-user mb-4 mb-xl-0">
+            <div class="card-header card-user-header">Immagine Profilo</div>
+            <div class="card-body text-center">
+              <!-- Profile picture image-->
+              <img class="img-account-profile rounded-circle mb-2"
+                src="assets/images/user.png" alt="">
+              <!-- Profile picture help block-->
+              <div class="small font-italic text-muted mb-4">JPG o PNG non piu' grandi di 5mb</div>
+              <!-- Profile picture upload button-->
+              <button class="btn btn-dark" type="button">Carica un immagine</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-8">
+          <!-- Account details card-->
+          <div class="card mb-4">
+            <div class="card-header card-user-header">Dettagli Account</div>
+            <div class="card-body">
+              <form>
+                <!-- Form Group (username)-->
+                <div class="mb-3">
+                  <label class="small mb-1" for="inputUsername">Username (come il tuo nome utente apparirà agli altri
+                    utenti nel sito)</label>
+                  <input class="form-control" id="inputUsername" type="text" placeholder="Enter your username"
+                    value="username">
+                </div>
+                <!-- Form Row-->
+                <div class="row gx-3 mb-3">
+                  <!-- Form Group (first name)-->
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="inputFirstName">Nome</label>
+                    <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name"
+                      value="Valerie">
+                  </div>
+                  <!-- Form Group (last name)-->
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="inputLastName">Cognome</label>
+                    <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name"
+                      value="Luna">
+                  </div>
+                </div>
+                <!-- Form Row        -->
+                <div class="row gx-3 mb-3">
+                  <!-- Form Group (organization name)-->
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="inputOrgName">Nome organizzazione</label>
+                    <input class="form-control" id="inputOrgName" type="text" placeholder="Enter your organization name"
+                      value="Start Bootstrap">
+                  </div>
+                  <!-- Form Group (location)-->
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="inputLocation">Indirizzo</label>
+                    <input class="form-control" id="inputLocation" type="text" placeholder="Enter your location"
+                      value="San Francisco, CA">
+                  </div>
+                </div>
+                <!-- Form Group (email address)-->
+                <div class="mb-3">
+                  <label class="small mb-1" for="inputEmailAddress">Indirizzo Email</label>
+                  <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address"
+                    value="name@example.com">
+                </div>
+                <!-- Form Row-->
+                <div class="row gx-3 mb-3">
+                  <!-- Form Group (phone number)-->
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="inputPhone">Numero di telefono</label>
+                    <input class="form-control" id="inputPhone" type="tel" placeholder="Enter your phone number"
+                      value="555-123-4567">
+                  </div>
+                  <!-- Form Group (birthday)-->
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="inputBirthday">Data di Nascita</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                      <input class="form-control datepicker" placeholder="Please select date" type="text">
+                    </div>
+                  </div>
+                </div>
+                <!-- Save changes button-->
+                <div class="d-flex justify-content-around">
+                <button class="btn btn-dark" type="button">Salva cambiamenti</button>
+                <button (click)="logout()" class="btn btn-outline-dark" type="button">Logout</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section *ngSwitchCase="'Fatturazione'">
+    <!-- Carta dei metodi di pagamento -->
+    <div class="container-xl px-4">
+      <div class="card card-header-actions mb-4">
+        <div class="card-header">
+          Metodi di Pagamento
+          <button class="btn btn-sm btn-dark" type="button">Aggiungi Metodo di Pagamento</button>
+        </div>
+        <div class="card-body px-0">
+          <!-- Metodo di pagamento 1 -->
+          <div class="d-flex align-items-center justify-content-between px-4">
+            <div class="d-flex align-items-center">
+              <i class="fab fa-cc-visa fa-2x cc-color-visa"></i>
+              <div class="ms-4">
+                <div class="small">Visa terminante con 1234</div>
+                <div class="text-xs text-muted">Scade il 04/2024</div>
+              </div>
+            </div>
+            <div class="ms-4 small">
+              <div class="badge bg-light text-dark me-3">Predefinito</div>
+              <a href="#!">Modifica</a>
+            </div>
+          </div>
+          <hr>
+          <!-- Metodo di pagamento 2 -->
+          <div class="d-flex align-items-center justify-content-between px-4">
+            <div class="d-flex align-items-center">
+              <i class="fab fa-cc-mastercard fa-2x cc-color-mastercard"></i>
+              <div class="ms-4">
+                <div class="small">Mastercard terminante con 5678</div>
+                <div class="text-xs text-muted">Scade il 05/2022</div>
+              </div>
+            </div>
+            <div class="ms-4 small">
+              <a class="text-muted me-3" href="#!">Rendi Predefinito</a>
+              <a href="#!">Modifica</a>
+            </div>
+          </div>
+          <hr>
+          <!-- Metodo di pagamento 3 -->
+          <div class="d-flex align-items-center justify-content-between px-4">
+            <div class="d-flex align-items-center">
+              <i class="fab fa-cc-amex fa-2x cc-color-amex"></i>
+              <div class="ms-4">
+                <div class="small">American Express terminante con 9012</div>
+                <div class="text-xs text-muted">Scade il 01/2026</div>
+              </div>
+            </div>
+            <div class="ms-4 small">
+              <a class="text-muted me-3" href="#!">Rendi Predefinito</a>
+              <a href="#!">Modifica</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carta della cronologia delle fatturazioni -->
+      <div class="card mb-4">
+        <div class="card-header">Cronologia Fatturazioni</div>
+        <div class="card-body p-0">
+          <!-- Tabella della cronologia delle fatturazioni -->
+          <div class="table-responsive table-billing-history">
+            <table class="table mb-0">
+              <thead>
+                <tr>
+                  <th class="border-gray-200" scope="col">ID Transazione</th>
+                  <th class="border-gray-200" scope="col">Data</th>
+                  <th class="border-gray-200" scope="col">Importo</th>
+                  <th class="border-gray-200" scope="col">Stato</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#39201</td>
+                  <td>15/06/2021</td>
+                  <td>$29.99</td>
+                  <td><span class="badge bg-light text-dark">In attesa</span></td>
+                </tr>
+                <tr>
+                  <td>#38594</td>
+                  <td>15/05/2021</td>
+                  <td>$29.99</td>
+                  <td><span class="badge bg-success">Pagato</span></td>
+                </tr>
+                <tr>
+                  <td>#38223</td>
+                  <td>15/04/2021</td>
+                  <td>$29.99</td>
+                  <td><span class="badge bg-success">Pagato</span></td>
+                </tr>
+                <tr>
+                  <td>#38125</td>
+                  <td>15/03/2021</td>
+                  <td>$29.99</td>
+                  <td><span class="badge bg-success">Pagato</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section *ngSwitchCase="'Sicurezza'">
+    <div class="container-xl px-4">
+      <div class="row">
+        <div class="col-lg-8">
+          <!-- Carta del cambio password -->
+          <div class="card mb-4">
+            <div class="card-header">Cambio Password</div>
+            <div class="card-body">
+              <form>
+                <!-- Gruppo di form (password attuale) -->
+                <div class="mb-3">
+                  <label class="small mb-1" for="currentPassword">Password Attuale</label>
+                  <input class="form-control" id="currentPassword" type="password"
+                    placeholder="Inserisci la password attuale">
+                </div>
+                <!-- Gruppo di form (nuova password) -->
+                <div class="mb-3">
+                  <label class="small mb-1" for="newPassword">Nuova Password</label>
+                  <input class="form-control" id="newPassword" type="password"
+                    placeholder="Inserisci la nuova password">
+                </div>
+                <!-- Gruppo di form (conferma nuova password) -->
+                <div class="mb-3">
+                  <label class="small mb-1" for="confirmPassword">Conferma Nuova Password</label>
+                  <input class="form-control" id="confirmPassword" type="password"
+                    placeholder="Conferma la nuova password">
+                </div>
+                <button class="btn btn-dark" type="button">Salva</button>
+              </form>
+            </div>
+          </div>
+          <!-- Carta delle preferenze di sicurezza -->
+          <div class="card mb-4">
+            <div class="card-header">Preferenze di Sicurezza</div>
+            <div class="card-body">
+              <!-- Opzioni di privacy dell'account -->
+              <h5 class="mb-1">Privacy dell'Account</h5>
+              <p class="small text-muted">Impostando il tuo account come privato, le informazioni del profilo e i post
+                non saranno visibili agli utenti al di fuori dei tuoi gruppi di utenti.</p>
+              <form>
+                <div class="form-check">
+                  <input class="form-check-input" id="radioPrivacy1" type="radio" name="radioPrivacy" checked="">
+                  <label class="form-check-label" for="radioPrivacy1">Pubblico (i post sono visibili a tutti gli
+                    utenti)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" id="radioPrivacy2" type="radio" name="radioPrivacy">
+                  <label class="form-check-label" for="radioPrivacy2">Privato (i post sono visibili solo agli utenti nei
+                    tuoi gruppi)</label>
+                </div>
+              </form>
+              <hr class="my-4">
+              <!-- Opzioni di condivisione dei dati -->
+              <h5 class="mb-1">Condivisione dei Dati</h5>
+              <p class="small text-muted">Condividere i dati di utilizzo ci aiuta a migliorare i nostri prodotti e a
+                servire meglio gli utenti mentre navigano attraverso la nostra applicazione. Con l'accettazione di
+                condividere i dati di utilizzo con noi, i rapporti sugli incidenti e le analisi di utilizzo saranno
+                inviati automaticamente al nostro team di sviluppo per le indagini.</p>
+              <form>
+                <div class="form-check">
+                  <input class="form-check-input" id="radioUsage1" type="radio" name="radioUsage" checked="">
+                  <label class="form-check-label" for="radioUsage1">Sì, condividi i dati e i rapporti sugli incidenti
+                    con gli sviluppatori dell'app</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" id="radioUsage2" type="radio" name="radioUsage">
+                  <label class="form-check-label" for="radioUsage2">No, limita la condivisione dei dati con gli
+                    sviluppatori dell'app</label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <!-- Carta dell'autenticazione a due fattori -->
+          <div class="card mb-4">
+            <div class="card-header">Autenticazione a Due Fattori</div>
+            <div class="card-body">
+              <p>Aggiungi un altro livello di sicurezza al tuo account abilitando l'autenticazione a due fattori. Ti
+                invieremo un messaggio di testo per verificare i tuoi tentativi di accesso su dispositivi e browser non
+                riconosciuti.</p>
+              <form>
+                <div class="form-check">
+                  <input class="form-check-input" id="twoFactorOn" type="radio" name="twoFactor" checked="">
+                  <label class="form-check-label" for="twoFactorOn">Attivato</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" id="twoFactorOff" type="radio" name="twoFactor">
+                  <label class="form-check-label" for="twoFactorOff">Disattivato</label>
+                </div>
+                <div class="mt-3">
+                  <label class="small mb-1" for="twoFactorSMS">Numero SMS</label>
+                  <input class="form-control" id="twoFactorSMS" type="tel" placeholder="Inserisci un numero di telefono"
+                    value="555-123-4567">
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- Carta dell'eliminazione dell'account -->
+          <div class="card mb-4">
+            <div class="card-header">Elimina Account</div>
+            <div class="card-body">
+              <p>L'eliminazione del tuo account è un'azione permanente e non può essere annullata. Se sei sicuro di
+                voler eliminare il tuo account, seleziona il pulsante qui sotto.</p>
+              <button class="btn btn-danger-soft text-danger" type="button">Ho capito, elimina il mio account</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section *ngSwitchCase="'Notifiche'">
+    <div class="container-xl px-4">
+      <div class="row">
+        <div class="col-lg-8">
+          <!-- Carta delle preferenze di notifica tramite email-->
+          <div class="card card-header-actions mb-4">
+            <div class="card-header">
+              Notifiche Email
+              <div class="form-check form-switch">
+                <input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
+                <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+              </div>
+            </div>
+            <div class="card-body">
+              <form>
+                <!-- Gruppo di form (email predefinita)-->
+                <div class="mb-3">
+                  <label class="small mb-1" for="inputNotificationEmail">Email di notifica predefinita</label>
+                  <input class="form-control" id="inputNotificationEmail" type="email" value="name@example.com"
+                    disabled="">
+                </div>
+                <!-- Gruppo di form (checkbox per gli aggiornamenti email)-->
+                <div class="mb-0">
+                  <label class="small mb-2">Scegli quali tipi di aggiornamenti email ricevere</label>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" id="checkAccountChanges" type="checkbox" checked="">
+                    <label class="form-check-label" for="checkAccountChanges">Modifiche apportate al tuo
+                      account</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" id="checkAccountGroups" type="checkbox" checked="">
+                    <label class="form-check-label" for="checkAccountGroups">Modifiche apportate ai gruppi di cui fai
+                      parte</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" id="checkProductUpdates" type="checkbox" checked="">
+                    <label class="form-check-label" for="checkProductUpdates">Aggiornamenti sui prodotti che hai
+                      acquistato o seguito</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" id="checkProductNew" type="checkbox" checked="">
+                    <label class="form-check-label" for="checkProductNew">Informazioni su nuovi prodotti e
+                      servizi</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" id="checkPromotional" type="checkbox">
+                    <label class="form-check-label" for="checkPromotional">Offerte di marketing e promozioni</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" id="checkSecurity" type="checkbox" checked="" disabled="">
+                    <label class="form-check-label" for="checkSecurity">Allarmi di sicurezza</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- Carta delle notifiche push SMS-->
+          <div class="card card-header-actions mb-4">
+            <div class="card-header">
+              Notifiche Push SMS
+              <div class="form-check form-switch">
+                <input class="form-check-input" id="smsToggleSwitch" type="checkbox" checked="">
+                <label class="form-check-label" for="smsToggleSwitch"></label>
+              </div>
+            </div>
+            <div class="card-body">
+              <form>
+                <!-- Gruppo di form (numero SMS predefinito)-->
+                <div class="mb-3">
+                  <label class="small mb-1" for="inputNotificationSms">Numero SMS predefinito</label>
+                  <input class="form-control" id="inputNotificationSms" type="tel" value="123-456-7890" disabled="">
+                </div>
+                <!-- Gruppo di form (checkbox per gli aggiornamenti push SMS)-->
+                <div class="mb-0">
+                  <label class="small mb-2">Scegli quali tipi di notifiche push ricevere</label>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" id="checkSmsComment" type="checkbox" checked="">
+                    <label class="form-check-label" for="checkSmsComment">Qualcuno commenta il tuo post</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" id="checkSmsShare" type="checkbox">
+                    <label class="form-check-label" for="checkSmsShare">Qualcuno condivide il tuo post</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" id="checkSmsFollow" type="checkbox" checked="">
+                    <label class="form-check-label" for="checkSmsFollow">Un utente segue il tuo account</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" id="checkSmsGroup" type="checkbox">
+                    <label class="form-check-label" for="checkSmsGroup">Vengono creati nuovi post nei gruppi di cui
+                      fai
+                      parte</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" id="checkSmsPrivateMessage" type="checkbox" checked="">
+                    <label class="form-check-label" for="checkSmsPrivateMessage">Ricevi un messaggio privato</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <!-- Carta delle preferenze di notifica-->
+          <div class="card">
+            <div class="card-header">Preferenze di Notifica</div>
+            <div class="card-body">
+              <form>
+                <!-- Gruppo di form (checkbox per le preferenze di notifica)-->
+                <div class="form-check mb-2">
+                  <input class="form-check-input" id="checkAutoGroup" type="checkbox" checked="">
+                  <label class="form-check-label" for="checkAutoGroup">Sottoscrivi automaticamente le notifiche dei
+                    gruppi</label>
+                </div>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" id="checkAutoProduct" type="checkbox">
+                  <label class="form-check-label" for="checkAutoProduct">Sottoscrivi automaticamente le notifiche dei
+                    nuovi prodotti</label>
+                </div>
+                <!-- Pulsante di invio-->
+                <button class="btn btn-danger-soft text-danger">Annulla la sottoscrizione a tutte le
+                  notifiche</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

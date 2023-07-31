@@ -1,0 +1,203 @@
+{
+  "categories": [
+    {
+      "name": "abbigliamento",
+      "subcategories": [
+        {
+          "id_subcategory": 1,
+          "name": "magliette",
+          "products": [
+            {
+              "id": 1,
+              "title": "T-shirt White Niraya",
+              "price": 24.9,
+              "description": "Una comoda maglietta bianca con il logo di Niraya sul petto. Ideale per un look casual e rilassato.",
+              "category": "abbigliamento",
+              "image1": "../src/assets/images/1.png",
+              "image2": "../src/assets/images/2.png",
+              "rating": {
+                "rate": 4.5,
+                "count": 50
+              }
+            },
+            {
+              "id": 2,
+              "title": "T-shirt Fear of Fire Niraya",
+              "price": 39.99,
+              "description": "Una T-shirt confortevole con la nostra scritta originale e una stampa evocativa sul petto. Perfetta per le giornate fresche.",
+              "category": "abbigliamento",
+              "image1": "../src/assets/images/3.png",
+              "image2": "../src/assets/images/4.png",
+              "rating": {
+                "rate": 4.2,
+                "count": 35
+              }
+            },
+            {
+              "id": 3,
+              "title": "Maglia Ghepard",
+              "price": 34.5,
+              "description": "Maglia Ghepard Niraya per un look formale o informale. Disponibile in diversi colori.",
+              "category": "abbigliamento",
+              "image1": "../src/assets/images/5.jpg",
+              "image2": "../src/assets/images/6.jpg",
+              "rating": {
+                "rate": 4.8,
+                "count": 40
+              }
+            },
+            {
+              "id": 4,
+              "title": "Pants Zebra fantasy",
+              "price": 29.95,
+              "description": "Pantaloni Zebra Fantasy a righe casual e di tendenza. Perfetti per un look estivo e rilassato.",
+              "category": "abbigliamento",
+              "image1": "../src/assets/images/7.jpg",
+              "image2": "../src/assets/images/8.png",
+              "rating": {
+                "rate": 4.6,
+                "count": 28
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "accessories",
+      "subcategories": [
+        {
+          "id_subcategory": 1,
+          "name": "wearables",
+          "products": [
+            {
+              "id_product": 1,
+              "title": "Cappellino White Niraya",
+              "price": 14.99,
+              "description": "Un cappellino bianco con il logo di Niraya. Perfetto per completare il tuo look streetwear.",
+              "image": "../src/assets/images/0.png",
+              "rating": {
+                "rate": 4.2,
+                "count": 30
+              }
+            },
+            {
+              "id_product": 2,
+              "title": "Occhiali da sole Niraya",
+              "price": 29.95,
+              "description": "Occhiali da sole eleganti e alla moda con montatura in metallo. Proteggi i tuoi occhi con stile.",
+              "image": "https://fakestoreapi.com/img/81UhxJzJhxL._AC_UY879_.jpg",
+              "rating": {
+                "rate": 4.8,
+                "count": 20
+              }
+            },
+            {
+              "id_product": 3,
+              "title": "Zaino Niraya",
+              "price": 19.5,
+              "description": "Uno zainetto di alta qualità con fibbia elegante. Completa il tuo outfit con stile.",
+              "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+              "rating": {
+                "rate": 4.7,
+                "count": 15
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "johndoe",
+      "address": "Via Roma 123",
+      "password": "password1",
+      "first_name": "John",
+      "last_name": "Doe",
+      "purchase_count": 5
+    },
+    {
+      "id": 2,
+      "username": "janesmith",
+      "address": "Via Milano 456",
+      "password": "password2",
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "purchase_count": 3
+    },
+    {
+      "id": 3,
+      "username": "michaeljohnson",
+      "address": "Via Venezia 789",
+      "password": "password3",
+      "first_name": "Michael",
+      "last_name": "Johnson",
+      "purchase_count": 7
+    },
+    {
+      "id": 4,
+      "username": "emilydavis",
+      "address": "Via Firenze 1011",
+      "password": "password4",
+      "first_name": "Emily",
+      "last_name": "Davis",
+      "purchase_count": 2
+    },
+    {
+      "id": 5,
+      "username": "robertwilson",
+      "address": "Via Napoli 1213",
+      "password": "password5",
+      "first_name": "Robert",
+      "last_name": "Wilson",
+      "purchase_count": 10
+    },
+    {
+      "id": 6,
+      "username": "sarahanderson",
+      "address": "Via Torino 1415",
+      "password": "password6",
+      "first_name": "Sarah",
+      "last_name": "Anderson",
+      "purchase_count": 1
+    },
+    {
+      "id": 7,
+      "username": "davidtaylor",
+      "address": "Via Genova 1617",
+      "password": "password7",
+      "first_name": "David",
+      "last_name": "Taylor",
+      "purchase_count": 4
+    },
+    {
+      "id": 8,
+      "username": "oliviabrown",
+      "address": "Via Bologna 1819",
+      "password": "password8",
+      "first_name": "Olivia",
+      "last_name": "Brown",
+      "purchase_count": 6
+    },
+    {
+      "id": 9,
+      "username": "jameslee",
+      "address": "Via Palermo 2021",
+      "password": "password9",
+      "first_name": "James",
+      "last_name": "Lee",
+      "purchase_count": 9
+    },
+    {
+      "id": 10,
+      "username": "sophiamartinez",
+      "address": "Via Catania 2223",
+      "password": "password10",
+      "first_name": "Sophia",
+      "last_name": "Martinez",
+      "purchase_count": 12
+    }
+  ]
+}

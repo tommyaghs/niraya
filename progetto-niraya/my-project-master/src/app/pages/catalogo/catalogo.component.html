@@ -1,0 +1,177 @@
+<!-- Start Content -->
+<div class="align-items-center pb-0 mb-0 justify-content-center d-flex">
+  <h3 class="fs-5 fw-semibold">Catalogo</h3>
+</div>
+<div class="container py-2">
+  <div class="row">
+
+    <div class="col-lg-3">
+      <nav class="navbar navbar-expand-lg bg-body-transparent col-md-3">
+        <div class="">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span><i class="fa-solid fa-caret-down" style="color: #000000;"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <div class="container col-md-3 mx-0">
+              <div class="container mt-0 ms-0 flex-shrink-0 p-3 bg-transparent" style="width: 350px;">
+                <ul class="list-unstyled ps-0 row">
+                  <li class="mb-1 col-4 col-md-12">
+                    <button class="btn btn-toggle align-items-center rounded collapsed dropdown-toggle"
+                      data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                      Stagione
+                    </button>
+                    <div class="collapse show" id="home-collapse">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li class="form-check"><input class="form-check-input" type="checkbox" value=""
+                            id="flexCheckChecked">
+                          <label class="form-check-label" for="flexCheckChecked">
+                            Primavera
+                          </label>
+                        </li>
+                        <li class="form-check"><input class="form-check-input" type="checkbox" value=""
+                            id="flexCheckChecked">
+                          <label class="form-check-label" for="flexCheckChecked">
+                            Estate
+                          </label>
+                        </li>
+                        <li class="form-check"><input class="form-check-input" type="checkbox" value=""
+                            id="flexCheckChecked">
+                          <label class="form-check-label" for="flexCheckChecked">
+                            Inverno
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="mb-1 col-4 col-md-12">
+                    <button class="btn btn-toggle align-items-center rounded dropdown-toggle" data-bs-toggle="collapse"
+                      data-bs-target="#dashboard-collapse" aria-expanded="true">
+                      Prodotti
+                    </button>
+                    <div class="collapse show" id="dashboard-collapse">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li class="form-check"><input class="form-check-input" type="checkbox" value=""
+                            id="defaultCheck1">
+                          <label class="form-check-label" for="flexCheckChecked">
+                            T-shirt
+                          </label>
+                        </li>
+                        <li class="form-check"><input class="form-check-input" type="checkbox" value=""
+                            id="defaultCheck1">
+                          <label class="form-check-label" for="flexCheckChecked">
+                            Felpe
+                          </label>
+                        </li>
+                        <li class="form-check"><input class="form-check-input" type="checkbox" value=""
+                            id="defaultCheck1">
+                          <label class="form-check-label" for="flexCheckChecked">
+                            Calzini
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+
+                  </li>
+                  <li class="mb-1 col-4 col-md-12">
+                    <button class="btn btn-toggle align-items-center rounded dropdown-toggle" data-bs-toggle="collapse"
+                      data-bs-target="#orders-collapse" aria-expanded="true">
+                      Colore
+                    </button>
+                    <div class="collapse show" id="orders-collapse">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li class="form-check"><input class="form-check-input" type="checkbox" value=""
+                            id="flexCheckChecked">
+                          <label class="form-check-label" for="flexCheckChecked">
+                            Nero
+                          </label>
+                        </li>
+                        <li class="form-check"><input class="form-check-input" type="checkbox" value=""
+                            id="flexCheckChecked">
+                          <label class="form-check-label" for="flexCheckChecked">
+                            Bianco
+                          </label>
+                        </li>
+                        <li class="form-check"><input class="form-check-input" type="checkbox" value=""
+                            id="flexCheckChecked">
+                          <label class="form-check-label" for="flexCheckChecked">
+                            Blu
+                          </label>
+                        </li>
+                        <li class="form-check"><input class="form-check-input" type="checkbox" value=""
+                            id="flexCheckChecked">
+                          <label class="form-check-label" for="flexCheckChecked">
+                            Rosso
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!--CATALOGO VESTITI-->
+
+    <div class="col-lg-9">
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="list-inline shop-top-menu pb-3 pt-1 g-3">
+            <li class="list-inline-item">
+              <a class="h5 text-dark text-decoration-none mr-3" href="#">T-shirt</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="h5 text-dark text-decoration-none mr-3" href="#">Giacche</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="h5 text-dark text-decoration-none" href="#">Accessori</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6 pb-4">
+          <div class="d-flex">
+            <form [formGroup]="sortingForm">
+              <label for="sortingCriteria">Ordina per:</label>
+              <select formControlName="sortingCriteria" id="sortingCriteria">
+                <option value="default">Tutti i prodotti</option>
+                <option value="title_asc">Titolo (A-Z)</option>
+                <option value="price_asc">Prezzo (crescente)</option>
+                <option value="price_desc">Prezzo (decrescente)</option>
+              </select>
+            </form>
+
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="row">
+          <div class="col-lg-4 col-6 my-3"
+          *ngFor="let prodotto of filterProductList">
+            <!--product-->
+            <app-product [product]="prodotto"></app-product>
+            <!--product-end-->
+          </div>
+        </div>
+
+        <div div="row">
+          <ul class="pagination pagination-lg justify-content-end">
+            <li class="page-item disabled">
+              <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="#"
+                tabindex="-1">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 text-dark" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="#">3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- End Content -->

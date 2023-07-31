@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img class="static" height="50px" src="assets/images/framelogo.jpg"><img height="50px" class="active "
+        src="assets/images/nir(4).gif">
+      <!--<img class="responsive " width="120px" src="assets/images/logo_niraya.png" alt="site icon" />-->
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse" id="navbarTogglerDemo02">
+      <div class="justify-content-center container-fluid d-flex py-3">
+        <ul class="nav nav-pills">
+          <li class="col-sm col-3 nav-item">
+            <a (click)="goToPage('catalogo')" role="button" id="menu" class="nav-link link-dark">Catalogo</a>
+          </li>
+          <li class="col-sm col-3 nav-item">
+            <a href="#" id="menu" class="nav-link link-dark">Gallery</a>
+          </li>
+          <li class="col-sm col-3 nav-item">
+            <a href="./pagine/blog.html" id="menu" class="nav-link link-dark">Blog</a>
+          </li>
+          <li class="col-sm col-3 nav-item">
+            <a href="#" id="menu" class="nav-link link-dark">Contatti</a>
+          </li>
+        </ul>
+      </div>
+      <div class="justify-content-around d-flex">
+        <div class="dropdown">
+          <button class="btn btn-hover position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="user-item " href=".">
+              <span><fa-icon class="text-black" [icon]="faMagnifyingGlass"></fa-icon></span></a>
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="cerca..." />
+                <div class="input-group-append">
+                  <button class="btn" type="button">
+                    <span><fa-icon class="text-black" [icon]="faMagnifyingGlass"></fa-icon></span>
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <button class="btn position-relative btn-hover" type="button">
+          <a (click)="goToPage('cart')" class="user-item"><span><fa-icon class="text-black"
+                [icon]="faBagShopping"></fa-icon></span></a>
+        </button>
+        <!-- USER -->
+        <!-- Button trigger modal -->
+        <button *ngIf="isLogged" (click)="handleUserIconClick()" type="button" class="btn btn-hover">
+          <i class="fs-5 bi bi-person-fill"></i>
+        </button>
+
+        <!-- Se l'utente non è loggato, visualizza l'icona dell'utente e apri la modale di accesso -->
+        <button *ngIf="!isLogged" (click)="handleUserIconClick()" type="button" class="btn btn-hover"
+          data-bs-toggle="modal" data-bs-target="#loginModal">
+          <fa-icon [icon]="faUser"></fa-icon>
+        </button>
+      </div>
+      <app-modal></app-modal>
+    </div>
+  </div>
+</nav>

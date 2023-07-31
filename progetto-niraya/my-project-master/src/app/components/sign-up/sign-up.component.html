@@ -1,0 +1,31 @@
+<!-- Registration Modal -->
+<div class="modal fade" id="registrationModal" aria-hidden="true" aria-labelledby="registrationModalLabel"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="registrationModalLabel">Registrazione</h5>
+        <button id="close-modal" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Input fields for registration -->
+        <div class="mb-3">
+          <label for="fullname" class="form-label">Nome e Cognome</label>
+          <input type="text" class="form-control" id="fullname" [(ngModel)]="fullName" placeholder="Nome e cognome">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" [(ngModel)]="email" placeholder="Inserisci email">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" [(ngModel)]="password" placeholder="Scegli una password">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <!-- Button to perform the registration action -->
+        <button class="btn btn-dark" (click)="registerUser()">Registrati</button>
+      </div>
+    </div>
+  </div>
+</div>

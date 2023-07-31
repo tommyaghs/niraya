@@ -1,0 +1,38 @@
+@import "../../../variabili";
+
+.btn.btn-rounded {
+  border-radius: 50%;
+}
+
+.facebook {
+  color: #fff;
+  background-color: $color-facebook;
+}
+
+.twitter {
+  color: #fff;
+  background-color: $color-twitter;
+}
+
+.google {
+  color: #fff;
+  background-color: $color-google;
+}
+
+.instagram {
+  color: #fff;
+  background-color: $color-instagram;
+}
+
+.linkedin {
+  color: #fff;
+  background-color: $color-linkedin;
+}
+//SOCIAL FOOTER
+
+//change background on hover
+
+a:hover {
+  color: $primary;
+  background-color: white;
+}

@@ -1,0 +1,53 @@
+#pic1 {
+  position: relative;
+  overflow: hidden;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 700px;
+  max-height: 700px;
+  cursor: pointer;
+}
+
+#pic1 img {
+  vertical-align: top;
+  max-width: 100%;
+  -moz-transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+/*
+#pic1:hover img {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  max-width: 700px;
+  max-height: 700px;
+}
+*/
+#pic2 {
+  position: relative;
+  overflow: hidden;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 1380px;
+  max-height: 1380px;
+  cursor: pointer;
+}
+
+#pic2 img {
+  vertical-align: top;
+  max-width: 100%;
+  -moz-transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+/*
+#pic2:hover img {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  max-width: 1380px;
+  max-height: 1380px;
+}*/

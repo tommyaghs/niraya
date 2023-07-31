@@ -1,0 +1,24 @@
+ //CATALOGO//
+ .prodotto{
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.15);
+  }
+}
+.picture2 {
+  display: none;
+}
+
+.thumbnail:hover {
+  .picture1 {
+    display: none;
+  }
+
+  .picture2 {
+    display: block;
+  }
+}
+
+//CATALOGO
+/* Shop */
+.shop-top-menu a:hover { color: gray !important;}

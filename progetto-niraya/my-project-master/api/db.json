@@ -1,0 +1,141 @@
+{
+  "categories": [
+    {
+      "name": "abbigliamento",
+      "subcategories": [
+        {
+          "id_subcategory": 1,
+          "name": "magliette",
+          "products": [
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "name": "accessories",
+      "subcategories": [
+        {
+          "id_subcategory": 1,
+          "name": "wearables",
+          "products": [
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    }
+  ],
+
+  "users": [
+    {
+      "fullName": "thomas colamedici",
+      "email": "tommyaghs@gmail.com",
+      "password": "$2b$10$xouSjXu8RM5JflNR5K9O/ehfH38hA6W/6BRrNjYgWoD37o1jiIAsq",
+      "id": [
+        1
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "T-shirt White Niraya",
+      "price": 24.9,
+      "description": "La Maglietta Niraya White è leggera, morbida e realizzata interamente in Italia. Un capo essenziale per il tuo guardaroba, offre comfort e stile senza sforzo. Il suo tessuto di alta qualità ti avvolgerà in una sensazione di piacevolezza al tatto, mentre il colore bianco puro aggiunge un tocco di freschezza a qualsiasi outfit. ",
+      "category": "abbigliamento",
+      "image": [
+        "assets/images/1.png",
+        "assets/images/2.png",
+        "assets/images/t-shirt (10).png",
+        "assets/images/t-shirt (11).png",
+        "assets/images/t-shirt (12).png"
+      ],
+      "rating": {
+        "rate": 4.5,
+        "count": 50
+      }
+    },
+    {
+      "id": 2,
+      "title": "T-shirt Fear of Fire",
+      "price": 39.99,
+      "description": "Una T-shirt confortevole con la nostra scritta originale e una stampa evocativa sul petto. Perfetta per le giornate fresche.",
+      "category": "abbigliamento",
+      "image": [
+        "assets/images/3.png",
+        "assets/images/4.png",
+        "assets/images/3.png",
+        "assets/images/4.png"
+      ],
+      "rating": {
+        "rate": 4.2,
+        "count": 35
+      }
+    },
+    {
+      "id": 3,
+      "title": "Maglia Ghepard",
+      "price": 34.5,
+      "description": "Maglia Ghepard Niraya per un look formale o informale. Disponibile in diversi colori.",
+      "category": "abbigliamento",
+      "image": [
+        "assets/images/5.jpg",
+        "assets/images/6.jpg",
+        "assets/images/5.jpg",
+        "assets/images/6.jpg"
+      ],
+      "rating": {
+        "rate": 4.8,
+        "count": 40
+      }
+    },
+    {
+      "id": 4,
+      "title": "Zebra fantasy",
+      "price": 29.95,
+      "description": "Pantaloni Zebra Fantasy a righe casual e di tendenza. Perfetti per un look estivo e rilassato.",
+      "category": "abbigliamento",
+      "image": [
+        "assets/images/7.jpg",
+        "assets/images/8.jpg"
+      ],
+      "rating": {
+        "rate": 4.6,
+        "count": 28
+      }
+    },
+    {
+      "id": 5,
+      "title": "Cappellino White",
+      "price": 14.99,
+      "description": "Un cappellino bianco con il logo di Niraya. Perfetto per completare il tuo look streetwear.",
+      "image": [
+        "assets/images/0.png",
+        "assets/images/00.png"
+      ],
+      "rating": {
+        "rate": 4.2,
+        "count": 30
+      }
+    },
+    {
+      "id": 6,
+      "title": "Occhiali da sole",
+      "price": 29.95,
+      "description": "Occhiali da sole eleganti e alla moda con montatura in metallo. Proteggi i tuoi occhi con stile.",
+      "image": [
+        "assets/images/5.jpg",
+        "assets/images/6.jpg"
+      ],
+      "rating": {
+        "rate": 4.8,
+        "count": 20
+      }
+    }
+  ]
+}
