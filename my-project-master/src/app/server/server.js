@@ -9,12 +9,10 @@ const crypto = require('crypto');
 app.use(express.json());
 app.use(cors({ origin: '*' }));
 
-
-
 function getUsersFromDb() {
   const dbFilePath = './api/db.json';
   const dbData = JSON.parse(fs.readFileSync(dbFilePath, 'utf8'));
-  return dbData.users;
+  return dbData.data.users; // Aggiornato per accedere a data.users
 }
 
 function findUserByEmail(email) {
@@ -23,13 +21,13 @@ function findUserByEmail(email) {
 
 // Endpoint registraz
 app.post('/express/register', (req, res) => {
-  const userData = req.body
+  const userData = req.body;
 
   // ID utente
   const dbFilePath = './api/db.json';
   let dbData = JSON.parse(fs.readFileSync(dbFilePath, 'utf8'));
-  const userId = dbData.userIdCounter;
-  dbData.userIdCounter++;
+  const userId = dbData.data.userIdCounter; // Aggiornato per accedere a data.userIdCounter
+  dbData.data.userIdCounter++; // Aggiornato per accedere a data.userIdCounter
   fs.writeFileSync(dbFilePath, JSON.stringify(dbData, null, 2));
 
   userData.id = userId;
@@ -44,27 +42,29 @@ app.post('/express/register', (req, res) => {
 
   res.status(201).json({ message: 'Registrazione avvenuta con successo!' });
 });
+
 function saveUserData(data) {
   const dbFilePath = './api/db.json';
   let dbData = JSON.parse(fs.readFileSync(dbFilePath, 'utf8'));
 
-  if (!dbData.users) {
-    dbData.users = [];
+  if (!dbData.data.users) { // Aggiornato per accedere a data.users
+    dbData.data.users = []; // Aggiornato per accedere a data.users
   }
 
-  dbData.users.push(data);
+  dbData.data.users.push(data); // Aggiornato per accedere a data.users
   fs.writeFileSync(dbFilePath, JSON.stringify(dbData, null, 2));
 }
+
 const secretKey = crypto.randomBytes(32).toString('hex');
 
 // Endpoint email
-app.get('/check-email/:email', (req, res) => {
+app.get('/express/check-email/:email', (req, res) => {
   const emailToCheck = req.params.email;
   const dbFilePath = './api/db.json';
   let dbData = JSON.parse(fs.readFileSync(dbFilePath, 'utf8'));
 
   // controllo email
-  const emailExists = dbData.users.some(user => user.email === emailToCheck);
+  const emailExists = dbData.data.users.some(user => user.email === emailToCheck); // Aggiornato per accedere a data.users
   res.json(emailExists);
 });
 

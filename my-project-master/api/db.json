@@ -30,17 +30,17 @@
       ]
     }
   ],
-
-  "users": [
-    {
-      "fullName": "thomas colamedici",
-      "email": "tommyaghs@gmail.com",
-      "password": "$2b$10$xouSjXu8RM5JflNR5K9O/ehfH38hA6W/6BRrNjYgWoD37o1jiIAsq",
-      "id": [
-        1
-      ]
-    }
-  ],
+  "data": {
+    "userIdCounter": 1,
+    "users": [
+      {
+        "fullName": "cane topo",
+        "email": "cane@gmail.com",
+        "password": "$2b$10$nPd6rKV4NMFNxaa6c22GeuSvwq9WmW5LQ3RRsLEQz4QNOQk4aWZYi",
+        "id": 0
+      }
+    ]
+  },
   "products": [
     {
       "id": 1,
