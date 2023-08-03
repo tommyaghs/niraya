@@ -1,6 +1,6 @@
 <div *ngIf="product">
-  <div (click)="goToProductDetail(product)" class=" product-card card mb-4 product-wap rounded-0">
-    <div class="d-flex card rounded-0 thumbnail product">
+  <div class=" product-card card mb-4 product-wap rounded-0">
+    <div (click)="goToProductDetail(product)" class="d-flex card rounded-0 thumbnail product">
       <div class="picture1">
         <img [src]="product.image[0]" class="responsive product-image card-img rounded-0 img-fluid"
           alt="t-shirt nera" />
@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="card-body">
-      <div class="d-flex justify-content-between">
+      <div (click)="goToProductDetail(product)" class="d-flex justify-content-between">
         <div>
           <h4 class="">{{ product.title }}</h4>
           <p class="small text-muted">{{product.category}}</p>
@@ -28,7 +28,7 @@
       </div>
       <div class=" d-flex justify-content-around align-items-end">
         <i class="bi bi-bookmark-heart"></i>
-        <p style="font-size: 18px;">Prezzo: {{ product.price }}</p>
+        <p style="font-size: 18px;">Prezzo: {{ product.price | currency:'EUR'  }}</p>
         <i (click)="addToCart(product)" class=" bi bi-cart-plus"></i>
       </div>
     </div>

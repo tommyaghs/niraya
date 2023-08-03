@@ -19,30 +19,29 @@ export class AuthService {
     return this.http.post(`${this.apiUrl}/register`, user);
   }
 
-  // Metodo per il login e ottenere il token
   loginUser(credentials: any): Observable<any> {
     return this.http.post(`${this.apiUrl}/login`, credentials);
   }
 
-  // Metodo per salvare il token nel localStorage o nei cookie
+  // salvare il token nel localStorage o nei cookie
   saveToken(token: string): void {
     localStorage.setItem('token', token);
 
   }
 
-  // Metodo per ottenere il token salvato nel client
+  // ottenere il token salvato nel client
   getToken(): string | null {
     return localStorage.getItem('token');
 
   }
 
-  // Metodo per verificare se l'utente è autenticato
+  // verificare se l'utente è autenticato
   isAuthenticated(): boolean {
     const token = this.getToken();
-    return !!token; // Restituisce true se il token esiste, altrimenti false
+    return !!token;
   }
 
-  // Metodo per effettuare il logout e rimuovere il token dal client
+  // effettuare il logout e rimuovere il token dal client
   logout(): void {
     localStorage.removeItem('token');
     this.router.navigate(['/dashboard']);

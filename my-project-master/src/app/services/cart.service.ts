@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Product } from 'src/app/interfaces/Category';
+import { Product } from '../interfaces/Category';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,6 @@ export class CartService {
   itemCount: number = 0;
 
   constructor() {
-    // Load cart items from local storage on service initialization
     const storedItems = localStorage.getItem(this.storageKey);
     if (storedItems) {
       this.items = JSON.parse(storedItems);
@@ -18,30 +17,49 @@ export class CartService {
     }
   }
 
-  addToCart(product: Product) {
-    this.items.push(product);
-    this.itemCount = this.items.length;
-    this.saveToLocalStorage();
+
+
+  addToCart(product: Product): void {
+    const existingProduct = this.getProductById(product.id);
+
+    if (existingProduct) {
+      existingProduct.quantity++;
+    } else {
+      this.items.push({ ...product, quantity: 1 });
+    }
   }
 
-  removeProductFromCart(productId: number) {
+  getProductById(productId: number): Product | undefined {
+    return this.items.find(item => item.id === productId);
+  }
+
+  removeProduct(productId: number) {
     this.items = this.items.filter(item => item.id !== productId);
-    this.itemCount = this.items.length;
-    this.saveToLocalStorage();
+    this.saveCartToLocalStorage();
+  }
+
+  private saveCartToLocalStorage() {
+    const cartJSON = JSON.stringify(this.items);
+    localStorage.setItem(this.storageKey, cartJSON);
+  }
+
+  private loadCartFromLocalStorage() {
+    const cartJSON = localStorage.getItem(this.storageKey);
+    if (cartJSON) {
+      this.items = JSON.parse(cartJSON);
+    } else {
+      this.items = [];
+    }
   }
 
   getItems() {
     return this.items;
   }
 
-  clearCart() {
+  clearCart(): Product[] {
     this.items = [];
-    this.itemCount = 0;
-    this.saveToLocalStorage();
+    this.saveCartToLocalStorage();
     return this.items;
   }
 
-  private saveToLocalStorage() {
-    localStorage.setItem(this.storageKey, JSON.stringify(this.items));
-  }
 }

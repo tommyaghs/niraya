@@ -10,6 +10,7 @@ export interface Subcategory {
 export interface Product {
   selectedImage: string;
   id: number,
+  quantity:number,
   title: string,
   price: number,
   description: string,

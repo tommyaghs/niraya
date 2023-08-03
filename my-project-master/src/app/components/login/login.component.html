@@ -1,10 +1,51 @@
-
+<!--login
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content rounded-4 shadow">
+     <div class="d-flex p-5 pb-4 border-bottom-0">
+       <h2 class="position-relative ps-4 fs-2 ms-auto me-auto">
+         spazio personale
+       </h2>
+       <button type="button" class="position-right btn-close" data-bs-dismiss="modal"
+         aria-label="Close" id="close-modal-access"></button>
+     </div>
+     <div class="modal-body p-5 pt-0">
+       <form class="">
+         <div class="form-floating mb-3">
+           <input type="email" class="form-control rounded-3" id="floatingInput"
+             placeholder="email@esempio.com" />
+           <label for="floatingInput">indirizzo email</label>
+         </div>
+         <div class="form-floating mb-3">
+           <input type="password" class="form-control rounded-3" id="floatingPassword"
+             placeholder="Password" />
+           <label for="floatingPassword">Password</label>
+         </div>
+        <button (click)="accedi()" class="w-100 mb-2 btn btn-lg rounded-3 btn-dark" id="close-modal-access" type="button">
+             accedi
+           </button>
+         <small class="text-body-secondary">clicando su 'accedi', accetti i nostri termini di
+           servizio.</small>
+         <hr class="my-4" />
+         <div class="container d-flex justify-content-center">
+           <p>se non hai un account</p>
+         </div>
+         <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+           registrati ora
+         </button>
+       </form>
+     </div>
+   </div>
+ </div>
+</div>-->
 <div class="modal fade" id="loginModal" aria-hidden="true" aria-labelledby="loginModalLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="loginModalLabel">Login</h5>
-        <button id="close-modal-access" type="button" class="btn-close" data-bs-dismiss="modal"
+        <h2 class="position-relative ps-4 ms-4 fs-2 ms-auto me-auto ">
+          Accedi
+        </h2>
+        <button id="close-modal-access" type="button" class="ms-0 btn-close" data-bs-dismiss="modal"
           aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -15,8 +56,10 @@
         </div>
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control" id="password" placeholder="Inserisci password" [(ngModel)]="password">
+          <input type="password" class="form-control" id="password" placeholder="Inserisci password"
+            [(ngModel)]="password">
         </div>
+        <small class="text-body-secondary">Hai dimenticato la password? <strong class="text-body-secondary btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#recoveryModal" data-bs-dismiss="modal">Clicca qui</strong></small>
       </div>
       <div class="modal-footer">
         <!-- Button to open the Registration Modal -->
@@ -24,6 +67,8 @@
           data-bs-dismiss="modal">Registrati</button>
         <!-- Button to perform the login action (you can add a JavaScript function to handle the login process) -->
         <button (click)="login()" class="btn btn-dark">Accedi</button>
+        <small class="text-body-secondary">clicando su 'accedi', accetti i nostri termini di
+          servizio.</small>
       </div>
     </div>
   </div>

@@ -7,13 +7,16 @@ import { CatalogoComponent } from './pages/catalogo/catalogo.component';
 import { AuthGuard } from './auth-guard';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
-
+import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'catalogo', component: CatalogoComponent},
+  {path: 'gallery', component: GalleryComponent},
   {path: 'cart', component: CartComponent},
+  {path: 'checkout', component: CheckoutComponent},
   {path: 'product-details', component: ProductDetailsComponent},
   {path : 'user-space', component: UserSpaceComponent, canActivate: [AuthGuard]},
   {

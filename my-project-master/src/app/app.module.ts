@@ -28,7 +28,10 @@ import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
-
+import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { PassRecoveryComponent } from './components/pass-recovery/pass-recovery.component';
+import { NgxPayPalModule } from 'ngx-paypal';
+import { GalleryComponent } from './pages/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -52,9 +55,13 @@ import { ProductDetailsComponent } from './pages/product-details/product-details
     LoginComponent,
     SignUpComponent,
     PageNotFoundComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CheckoutComponent,
+    PassRecoveryComponent,
+    GalleryComponent,
   ],
   imports: [
+    NgxPayPalModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,

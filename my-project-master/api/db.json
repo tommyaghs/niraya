@@ -31,19 +31,40 @@
     }
   ],
   "data": {
-    "userIdCounter": 1,
+    "userIdCounter": 4,
     "users": [
       {
         "fullName": "cane topo",
         "email": "cane@gmail.com",
         "password": "$2b$10$nPd6rKV4NMFNxaa6c22GeuSvwq9WmW5LQ3RRsLEQz4QNOQk4aWZYi",
         "id": 0
+      },
+      {
+        "fullName": "arsh kaur",
+        "email": "arsh@gmail.com",
+        "password": "$2b$10$WbsjciiuKZKbQVLVm1O3HeJZAfrVbXrM2GcRgFPcnqe2Y13uLRiXa",
+        "id": 1
+      },
+      {
+        "fullName": "andrea ciccio",
+        "email": "andrea@gmail.com",
+        "password": "$2b$10$gaE/XvD9ksaL0J5l1wmPS.ORs9KOafcrgiWI7/d5vlcx6UKwAlKGu",
+        "id": 2
+      },
+      {
+        "fullName": "sdsd",
+        "email": "sdsd@gmail.com",
+        "password": "$2b$10$3i7G25bdopDnRI1B2S9aCejdb9boBuETbYpru2aEcEHSMGHCou/Wm",
+        "id": 3
       }
+    ],
+    "orders": [
     ]
   },
   "products": [
     {
       "id": 1,
+      "quantity": "1",
       "title": "T-shirt White Niraya",
       "price": 24.9,
       "description": "La Maglietta Niraya White è leggera, morbida e realizzata interamente in Italia. Un capo essenziale per il tuo guardaroba, offre comfort e stile senza sforzo. Il suo tessuto di alta qualità ti avvolgerà in una sensazione di piacevolezza al tatto, mentre il colore bianco puro aggiunge un tocco di freschezza a qualsiasi outfit. ",
@@ -62,6 +83,7 @@
     },
     {
       "id": 2,
+      "quantity": "1",
       "title": "T-shirt Fear of Fire",
       "price": 39.99,
       "description": "Una T-shirt confortevole con la nostra scritta originale e una stampa evocativa sul petto. Perfetta per le giornate fresche.",
@@ -79,6 +101,7 @@
     },
     {
       "id": 3,
+      "quantity": "1",
       "title": "Maglia Ghepard",
       "price": 34.5,
       "description": "Maglia Ghepard Niraya per un look formale o informale. Disponibile in diversi colori.",
@@ -96,6 +119,7 @@
     },
     {
       "id": 4,
+      "quantity": "1",
       "title": "Zebra fantasy",
       "price": 29.95,
       "description": "Pantaloni Zebra Fantasy a righe casual e di tendenza. Perfetti per un look estivo e rilassato.",
@@ -111,6 +135,7 @@
     },
     {
       "id": 5,
+      "quantity": "1",
       "title": "Cappellino White",
       "price": 14.99,
       "description": "Un cappellino bianco con il logo di Niraya. Perfetto per completare il tuo look streetwear.",
@@ -125,6 +150,7 @@
     },
     {
       "id": 6,
+      "quantity": "1",
       "title": "Occhiali da sole",
       "price": 29.95,
       "description": "Occhiali da sole eleganti e alla moda con montatura in metallo. Proteggi i tuoi occhi con stile.",

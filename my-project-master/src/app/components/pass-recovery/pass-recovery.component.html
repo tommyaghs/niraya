@@ -1,0 +1,24 @@
+<!-- Recovery Password Modal -->
+<div class="modal fade" id="recoveryModal" aria-hidden="true" aria-labelledby="recoveryModalLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="position-relative ps-4 ms-4 fs-2 ms-auto me-auto">
+          Recupero Password
+        </h2>
+        <button id="close-modal-recovery" type="button" class="ms-0 btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Input field for password recovery -->
+        <div class="mb-3">
+          <label for="recovery-email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="recovery-email" placeholder="Inserisci email" [(ngModel)]="recoveryEmail">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <!-- Button to trigger password recovery (you can add a JavaScript function to handle the recovery process) -->
+        <button class="btn btn-dark">Recupera Password</button>
+      </div>
+    </div>
+  </div>
+</div>

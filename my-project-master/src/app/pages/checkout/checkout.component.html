@@ -1,0 +1,207 @@
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<div class="container pt-5">
+  <div class="align-items-center pb-0 mb-0 justify-content-center d-flex">
+    <h3 class="fs-5 fw-semibold">Checkout</h3>
+  </div>
+  <div class="row">
+    <div class="col-xl-8">
+
+      <div class="card">
+        <div class="card-body">
+          <ol class="activity-checkout mb-0 px-4 mt-3">
+            <li class="checkout-item">
+              <div class="avatar checkout-icon p-1">
+                <div class="avatar-title rounded-circle bg-dark">
+                  <i class="bx bxs-receipt text-white font-size-20"></i>
+                </div>
+              </div>
+              <div class="feed-item-list">
+                <div>
+                  <h5 class="font-size-16 mb-1">Informazioni di Fatturazione</h5>
+                  <p class="text-muted text-truncate mb-4">inserisci le informazioni e salvale per i tuoi prossimi
+                    ordini</p>
+                  <div class="mb-3">
+                    <form>
+                      <div>
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="mb-3">
+                              <label class="form-label" for="billing-name">Nome</label>
+                              <input type="text" class="form-control" id="billing-name" placeholder="Inserisci nome">
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="mb-3">
+                              <label class="form-label" for="billing-email-address">Indirizzo Email</label>
+                              <input type="email" class="form-control" id="billing-email-address"
+                                placeholder="Inserisci indirizzo email">
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="mb-3">
+                              <label class="form-label" for="billing-phone">Telefono</label>
+                              <input type="text" class="form-control" id="billing-phone"
+                                placeholder="Inserisci numero di telefono">
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="mb-3">
+                          <label class="form-label" for="billing-address">Indirizzo</label>
+                          <textarea class="form-control" id="billing-address" rows="3"
+                            placeholder="Inserisci indirizzo completo"></textarea>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="mb-4 mb-lg-0">
+                              <label class="form-label">Nazione</label>
+                              <select class="form-control form-select" title="Nazione">
+                                <option value="0">Seleziona Nazione</option>
+                                <option value="AF">Afghanistan</option>
+                                <option value="AL">Albania</option>
+                                <option value="DZ">Algeria</option>
+                                <option value="AS">Samoa Americane</option>
+                                <option value="AD">Andorra</option>
+                                <option value="AO">Angola</option>
+                                <option value="AI">Anguilla</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-4">
+                            <div class="mb-4 mb-lg-0">
+                              <label class="form-label" for="billing-city">Città</label>
+                              <input type="text" class="form-control" id="billing-city" placeholder="Inserisci Città">
+                            </div>
+                          </div>
+
+                          <div class="col-lg-4">
+                            <div class="mb-0">
+                              <label class="form-label" for="zip-code">CAP / Codice postale</label>
+                              <input type="text" class="form-control" id="zip-code"
+                                placeholder="Inserisci Codice Postale">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="checkout-item">
+              <div class="avatar checkout-icon p-1">
+                <div class="avatar-title rounded-circle bg-dark">
+                  <i class="bx bxs-wallet-alt text-white font-size-20"></i>
+                </div>
+              </div>
+              <div class="feed-item-list">
+                <div>
+                  <h5 class="font-size-16 mb-1">Informazioni di Pagamento</h5>
+                  <p class="text-muted text-truncate mb-4">inserisci le informazioni richieste</p>
+                </div>
+                <div>
+                  <h5 class="font-size-14 mb-3">Metodo di Pagamento :</h5>
+                  <div class="row">
+
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="row my-4">
+        <div class="col">
+          <a href="ecommerce-products.html" class="btn btn-link text-muted">
+            <i class="mdi mdi-arrow-left me-1"></i> Continua lo Shopping </a>
+        </div> <!-- end col -->
+      </div> <!-- end row-->
+    </div>
+    <div class="col-xl-4">
+      <div class="card checkout-order-summary">
+        <div class="card-body">
+          <div class="p-3 bg-light mb-3">
+            <h5 class="font-size-16 mb-0">Riepilogo Ordine <span class="float-end ms-2">#MN0124</span></h5>
+          </div>
+          <div class="table-responsive">
+            <div>
+              <table class="table table-centered mb-0 table-nowrap">
+                <thead>
+                  <tr>
+                    <th class="border-top-0" style="width: 110px;" scope="col">Prodotto</th>
+                    <th class="border-top-0" scope="col">Descrizione Prodotto</th>
+                    <th class="border-top-0" scope="col">Prezzo</th>
+                  </tr>
+                </thead>
+                <tbody  *ngFor="let item of cartItems">
+                  <tr >
+                    <th scope="row"><img [src]="item.image[0]" alt="product-img"
+                        title="product-img" class="avatar-lg rounded"></th>
+                    <td>
+                      <h5 class="font-size-16 text-truncate" class="text-dark"><p>{{ item.title }}</p>
+                      </h5>
+                      <p class="text-muted mb-0">
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star-half text-warning"></i>
+                      </p>
+                      <p class="text-muted mb-0 mt-1"><p>Quantity: {{ item.quantity }}</p>
+                    </td>
+                    <td><p>Price: {{ item.price | currency:'EUR' }}</p></td>
+                  </tr>
+                </tbody>
+
+                  <!-- Altri elementi e logiche nel template -->
+                </table>
+                <div class="container">
+
+                  <table class="table-price">
+                    <tbody>
+                      <tr>
+                        <td>Totale:</td>
+                        <td>{{ OrderDetails.subtotal | currency:'EUR' }}</td>
+                      </tr>
+                      <tr>
+                        <td>di cui IVA ({{ ivaRate }}%):</td>
+                        <td>{{ OrderDetails.tax | currency:'EUR' }}</td>
+                      </tr>
+                      <tr>
+                        <td>Spedizione:</td>
+                        <td>{{ OrderDetails.shippingCost | currency:'EUR' }}</td>
+                      </tr>
+                      <tr *ngIf="couponApplied">
+                        <td>Sconto coupon (20%):</td>
+                        <td>- {{ OrderDetails.couponDiscount | currency:'EUR' }}</td>
+                      </tr>
+                      <!-- <tr>
+                        <td>
+                          <h5>Totale</h5>
+                        </td>
+                        <td>
+                          <h5>{{ OrderDetails.total | currency:'EUR' }}</h5>
+                        </td>
+                      </tr> -->
+                    </tbody>
+                  </table>
+                </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-start">
+        <div class="text-end mt-2 mt-sm-0">
+          <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+        </div>
+      </div> <!-- end col -->
+    </div>
+  </div>
+  <!-- end row -->
+</div>
+
